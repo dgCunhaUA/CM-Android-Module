@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
                 android:background="@android:color/transparent"
-                android:contentDescription="delete"
+                android:contentDescription="@string/delete"
                 app:icon="@android:drawable/ic_input_delete"
                 app:iconSize="50dp"
                 app:iconTint="#040404"
@@ -41,7 +41,7 @@
                 android:layout_marginStart="24dp"
                 android:ems="10"
                 android:enabled="false"
-                android:hint="Phone Number"
+                android:hint="@string/phone_number"
                 android:inputType="phone"
                 android:minHeight="48dp"
                 android:textColor="#000000"
@@ -49,7 +49,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/delButton"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:autofillHints="" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -65,7 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:contentDescription="speedDial1"
+                android:contentDescription="@string/speedDial1"
                 android:backgroundTint="#FF9800"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +77,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FF9800"
-                android:contentDescription="speedDial2"
+                android:contentDescription="@string/speedDial2"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/speedDial3Button"
@@ -87,7 +88,7 @@
                 android:id="@+id/speedDial3Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="speedDial3"
+                android:contentDescription="@string/speedDial3"
                 android:layout_marginEnd="24dp"
                 android:backgroundTint="#FF9800"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -113,7 +114,7 @@
                 android:layout_height="80dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
-                android:text="1"
+                android:text="@string/_1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -122,7 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:layout_marginTop="24dp"
-                android:text="2"
+                android:text="@string/_2"
                 app:layout_constraintEnd_toStartOf="@+id/button3"
                 app:layout_constraintStart_toEndOf="@+id/button1"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -133,7 +134,7 @@
                 android:layout_height="80dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:text="3"
+                android:text="@string/_3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -143,7 +144,7 @@
                 android:layout_height="80dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
-                android:text="4"
+                android:text="@string/_4"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button1" />
 
@@ -152,7 +153,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:layout_marginTop="24dp"
-                android:text="5"
+                android:text="@string/_5"
                 app:layout_constraintEnd_toStartOf="@+id/button6"
                 app:layout_constraintStart_toEndOf="@+id/button4"
                 app:layout_constraintTop_toBottomOf="@+id/button2" />
@@ -163,7 +164,7 @@
                 android:layout_height="80dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:text="6"
+                android:text="@string/_6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button3" />
 
@@ -173,7 +174,7 @@
                 android:layout_height="80dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
-                android:text="7"
+                android:text="@string/_7"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button4" />
 
@@ -182,7 +183,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:layout_marginTop="24dp"
-                android:text="8"
+                android:text="@string/_8"
                 app:layout_constraintEnd_toStartOf="@+id/button9"
                 app:layout_constraintStart_toEndOf="@+id/button7"
                 app:layout_constraintTop_toBottomOf="@+id/button5" />
@@ -193,7 +194,7 @@
                 android:layout_height="80dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:text="9"
+                android:text="@string/_9"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button6" />
 
@@ -203,7 +204,7 @@
                 android:layout_height="80dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
-                android:text="*"
+                android:text="@string/star"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button7" />
 
@@ -212,7 +213,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:layout_marginTop="24dp"
-                android:text="0"
+                android:text="@string/_0"
                 app:layout_constraintEnd_toStartOf="@+id/buttonCardinal"
                 app:layout_constraintStart_toEndOf="@+id/buttonStar"
                 app:layout_constraintTop_toBottomOf="@+id/button8" />
@@ -223,7 +224,7 @@
                 android:layout_height="80dp"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="24dp"
-                android:text="#"
+                android:text="@string/cardinal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button9" />
 
@@ -242,7 +243,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F8F7F7"
-                android:contentDescription="call"
+                android:contentDescription="@string/call"
                 app:icon="@android:drawable/stat_sys_phone_call"
                 app:iconSize="75dp"
                 app:iconTint="#67E66C"
