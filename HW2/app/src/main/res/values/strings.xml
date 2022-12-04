@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HW2</string>
+    <string name="element_text">texr</string>
+    <string name="city">City</string>
+    <string name="city1">Viseu</string>
+    <string name="city2">Aveiro</string>
+
+</resources>
