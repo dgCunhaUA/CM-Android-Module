@@ -22,6 +22,6 @@
         android:layout_weight="1"
         android:id="@+id/detail_container"
         android:name="pt.ua.cm.hw2.CityWeatherFragment"
-        />
+        tools:layout="@layout/fragment_city_weather" />
 
 </androidx.slidingpanelayout.widget.SlidingPaneLayout>

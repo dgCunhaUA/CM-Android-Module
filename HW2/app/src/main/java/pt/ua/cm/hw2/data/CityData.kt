@@ -7,11 +7,13 @@ object CityData {
         return arrayListOf(
             City(
                 id = 1,
-                nameResourceId = R.string.city1,
+                nameResourceId = R.string.city2,
+                globalId = 1010500,
             ),
             City(
                 id = 2,
-                nameResourceId = R.string.city2,
+                nameResourceId = R.string.city1,
+                globalId = 1182300,
             ),
         )
     }

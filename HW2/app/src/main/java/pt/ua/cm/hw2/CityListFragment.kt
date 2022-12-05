@@ -17,17 +17,12 @@ class CityListFragment : Fragment() {
 
     private val cityViewModel: CityViewModel by activityViewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return FragmentCityListBinding.inflate(inflater, container, false).root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

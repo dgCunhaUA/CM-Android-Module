@@ -12,11 +12,10 @@ class CityWeatherFragment : Fragment() {
 
     private val cityViewModel: CityViewModel by activityViewModels()
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         return FragmentCityWeatherBinding.inflate(inflater, container, false).root
     }
@@ -25,7 +24,9 @@ class CityWeatherFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentCityWeatherBinding.bind(view)
 
-        // Attach an observer on the currentSport to update the UI automatically when the data
+        binding.cityViewModel = cityViewModel
+
+        // Attach an observer on the currentCity to update the UI automatically when the data
         // changes.
         cityViewModel.currentCity.observe(this.viewLifecycleOwner) {
             binding.cityNameDetail.text = getString(it.nameResourceId)
