@@ -4,8 +4,11 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.gson.Gson
 import pt.ua.cm.hw2.data.City
 import pt.ua.cm.hw2.data.CityData
+import pt.ua.cm.hw2.data.Weather
+import pt.ua.cm.hw2.data.WeatherGroup
 import pt.ua.cm.hw2.network.WeatherApi
 import retrofit2.Call
 import retrofit2.Callback
@@ -21,8 +24,8 @@ class CityViewModel : ViewModel() {
     val cityData: ArrayList<City>
         get() = _cityData
 
-    private val _response = MutableLiveData<String>()
-    val response: LiveData<String>
+    private val _response = MutableLiveData<WeatherGroup>()
+    val response: LiveData<WeatherGroup>
         get() = _response
 
     init {
@@ -40,14 +43,14 @@ class CityViewModel : ViewModel() {
      */
     private fun getCityWeather(globalId: Long) {
         WeatherApi.retrofitService.getWeather(globalId).enqueue(
-            object: Callback<String> {
-                override fun onResponse(call: Call<String>, response: Response<String>) {
-                    Log.i(null, response.body().toString())
+            object: Callback<WeatherGroup> {
+                override fun onResponse(call: Call<WeatherGroup>, response: Response<WeatherGroup>) {
                     _response.value = response.body()
+                    Log.i(null, _response.toString())
                 }
 
-                override fun onFailure(call: Call<String>, t: Throwable) {
-                    _response.value = "Failure: " + t.message
+                override fun onFailure(call: Call<WeatherGroup>, t: Throwable) {
+                    Log.i(null, t.toString())
                 }
             })
     }
