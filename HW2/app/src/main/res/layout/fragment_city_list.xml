@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.slidingpanelayout.widget.SlidingPaneLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@id/sliding_pane_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CityListFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="550dp"
+    <data>
+
+    </data>
+
+    <androidx.slidingpanelayout.widget.SlidingPaneLayout
+        android:id="@id/sliding_pane_layout"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:padding="8dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        tools:context=".CityListFragment">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:layout_width="300dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:id="@+id/detail_container"
-        android:name="pt.ua.cm.hw2.CityWeatherFragment"
-        tools:layout="@layout/fragment_city_weather" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="550dp"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
-</androidx.slidingpanelayout.widget.SlidingPaneLayout>
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/detail_container"
+            android:name="pt.ua.cm.hw2.CityWeatherFragment"
+            tools:layout="@layout/fragment_city_weather" />
+
+    </androidx.slidingpanelayout.widget.SlidingPaneLayout>
+</layout>

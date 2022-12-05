@@ -8,7 +8,6 @@ import retrofit2.http.Path
 
 
 private const val BASE_URL = "https://api.ipma.pt/"
-    //"https://android-kotlin-fun-mars-server.appspot.com"
 
 private val retrofit = Retrofit.Builder()
     .addConverterFactory(ScalarsConverterFactory.create())

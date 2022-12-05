@@ -7,27 +7,31 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.slidingpanelayout.widget.SlidingPaneLayout
 import pt.ua.cm.hw2.databinding.FragmentCityListBinding
+import pt.ua.cm.hw2.databinding.FragmentCityWeatherBinding
 
 class CityListFragment : Fragment() {
 
     private val cityViewModel: CityViewModel by activityViewModels()
 
+    private lateinit var binding: FragmentCityListBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return FragmentCityListBinding.inflate(inflater, container, false).root
+    ): View {
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_city_list, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val binding = FragmentCityListBinding.bind(view)
+        //val binding = FragmentCityListBinding.bind(view)
         val slidingPaneLayout = binding.slidingPaneLayout
         requireActivity().onBackPressedDispatcher.addCallback(
             viewLifecycleOwner,
@@ -67,6 +71,4 @@ class CityListOnBackPressedCallBack(private val slidingPaneLayout: SlidingPaneLa
     init {
         slidingPaneLayout.addPanelSlideListener(this)
     }
-
-
 }

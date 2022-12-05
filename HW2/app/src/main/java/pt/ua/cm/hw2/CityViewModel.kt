@@ -26,7 +26,6 @@ class CityViewModel : ViewModel() {
         get() = _response
 
     init {
-        // Initialize the city data.
         _cityData = CityData.getCityData()
         _currentCity.value = _cityData[0]
     }
