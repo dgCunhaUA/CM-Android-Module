@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/dialerFragment">
+
+    <fragment
+        android:id="@+id/dialerFragment"
+        android:name="pt.ua.cm.dialer.DialerFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_dialer">
+        <action
+            android:id="@+id/action_dialerFragment_to_speedDialDetails"
+            app:destination="@id/speedDialDetails" />
+        <argument
+            android:name="Contact"
+            android:defaultValue="@null"
+            app:argType="pt.ua.cm.dialer.model.Contact"
+            app:nullable="true" />
+        <argument
+            android:name="SpeedDial"
+            android:defaultValue="@null"
+            app:argType="java.util.HashMap"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/speedDialDetails"
+        android:name="pt.ua.cm.dialer.SpeedDialDetails"
+        android:label="@string/fragment_speed_dial_details"
+        tools:layout="@layout/fragment_speed_dial_details">
+        <argument
+            android:name="Contact"
+            app:argType="pt.ua.cm.dialer.model.Contact" />
+        <action
+            android:id="@+id/action_speedDialDetails_to_dialerFragment"
+            app:destination="@id/dialerFragment" />
+        <argument
+            android:name="SpeedDial"
+            app:argType="java.util.HashMap" />
+    </fragment>
+</navigation>
